@@ -90,8 +90,75 @@
                 'Quasi-Geostrophic Motions in the Equatorial Area'. Considering the linearized shallow water equation:
             </p>
 
-            
+            \[
+            \frac{\partial u}{\partial t} -fv + g\frac{\partial h}{\partial x} = 0
+            \]
 
+            \[
+            \frac{\partial v}{\partial t} +fu + g\frac{\partial h}{\partial y} = 0
+            \]
+
+            \[
+            \frac{\partial h}{\partial t} + H \(\frac{\partial u}{|partial x} + \frac{\partial v}{\partial y}\) = 0
+            \]
+
+            <p>
+                Transform it into the non-dimentional form by taking the time scale \( [T] = \sqrt{1/c\beta}\) and the
+                length scale \( [L] = \sqrt{c/\beta}\), 
+            </p>
+            
+            \[
+            \frac{\partial u}{\partial t} -v + \frac{\partial \phi}{\partial x} = 0
+            \]
+
+            \[
+            \frac{\partial v}{\partial t} +u + \frac{\partial \phi}{\partial y} = 0
+            \]
+
+            \[
+            \frac{\partial \phi}{\partial t} + \frac{\partial u}{|partial x} + \frac{\partial v}{\partial y} = 0
+            \]
+
+            <p>
+                ,where \(\phi\) is the non-dimentional geopotential height. Assuming all the quantities have the factor 
+                \( \exp{i \omega t + i k x\)\), the PDE reduced to an ODE:
+            </p>
+
+            \[
+            \frac{d^2 \hat v}{dy^2} + \(\omega^2 - k^2 + \frac{k}{\omega} - y^2\) v = 0,
+            \]
+            
+            <p>
+                with the boundary condition \( v \to 0 \) at \( y \to \infinity \). Obviously, \(\hat v = 0\) is the trivial solution for the ODE 
+                and thus we should return to the original PDE to seek the corresponding solutions for \(u\) and \(\phi\),
+            <\p>
+
+            \[
+            i\omega u + ik\phi = 0
+            \]
+            \[
+            yu+\frac{d\phi}{dy} = 0
+            \]
+            \[
+            i\omega\phi + iku = 0
+            \]
+
+            <p>
+                The dispersion relation is \((\omega+k)(\omega-k)=0\). To satisfy the boundary condition which all the quantities should converge to 
+                zero at \(y \to \infty \), only \(\omega = -k \) is reserved. The phase speed is negative, which means that the wave propagate to the 
+                east, since we assume the wave solution in the form of \( \exp{i \omega t + i k x\)\), instead of \( \exp{i \omega t - i k x\)\). 
+            <\p>
+                
+
+            <p>
+                If \(v\) is not equal to zero anywhere, it is an eigenvalue problem, just the same
+                as the Shrödinger equation with the Hamitonian \( \hat H = \frac{\hat p ^2}{2m} + \frac{1}{2} m \omega^2 \hat x^2\), 
+                i.e. the harmonic oscillator. The above ODE and the corresponding can be satisfied only when the following relationship holds,
+            </p>
+
+            \[
+            \omega^2 - k^2 + \frac{k}{\omega} = 2n + 1 (n = 0, \ 1, \ 2, ...).
+            \]
 
 
 
